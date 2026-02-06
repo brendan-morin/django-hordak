@@ -3,8 +3,7 @@ mock
 pytest
 coveralls
 django-coverage-plugin
-psycopg2
+psycopg[binary]
 mysqlclient
-psycopg2-binary>=2.6.2
 setuptools
 parameterized

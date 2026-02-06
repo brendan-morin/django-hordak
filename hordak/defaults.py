@@ -22,3 +22,11 @@ DECIMAL_PLACES = getattr(settings, "HORDAK_DECIMAL_PLACES", 2)
 MAX_DIGITS = getattr(settings, "HORDAK_MAX_DIGITS", 13)
 
 UUID_DEFAULT = getattr(settings, "HORDAK_UUID_DEFAULT", uuid4)
+
+
+# Models
+
+ACCOUNT_MODEL = getattr(settings, 'HORDAK_ACCOUNT_MODEL', 'hordak.Account')
+TRANSACTION_MODEL = getattr(settings, 'HORDAK_TRANSACTION_MODEL', 'hordak.Transaction')
+LEG_MODEL = getattr(settings, 'HORDAK_LEG_MODEL', 'hordak.Leg')
+STATEMENT_IMPORT_MODEL = getattr(settings, 'HORDAK_STATEMENT_IMPORT_MODEL', 'hordak.StatementImport')
