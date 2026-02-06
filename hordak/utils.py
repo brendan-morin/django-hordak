@@ -1,7 +1,7 @@
 from django.db import transaction, connection
 
-from hordak import models
-
+from django import models
+from django.utils.translation import gettext_lazy as _
 from djmoney.settings import CURRENCY_CHOICES, DEFAULT_CURRENCY
 
 
