@@ -5,16 +5,16 @@ from django.db import transaction as db_transaction
 from django.db.models import Case, DecimalField, F, JSONField, Sum, When
 from django.db.models.functions import Coalesce
 from django.utils.translation import gettext_lazy as _
-from djmoney.settings import CURRENCY_CHOICES
 from moneyed import CurrencyDoesNotExist, Money
 from mptt.models import MPTTModel, TreeForeignKey, TreeManager
 from django.apps import apps
 
 from hordak import exceptions
 from hordak.defaults import (
-    DEFAULT_CURRENCY,
     UUID_DEFAULT,
-    ACCOUNT_MODEL, TRANSACTION_MODEL, LEG_MODEL,
+    ACCOUNT_MODEL,
+    TRANSACTION_MODEL,
+    LEG_MODEL,
 )
 
 from hordak.utilities.currency import Balance

@@ -12,7 +12,9 @@ from hordak.defaults import (
     DECIMAL_PLACES,
     MAX_DIGITS,
     UUID_DEFAULT,
-    ACCOUNT_MODEL, TRANSACTION_MODEL, STATEMENT_IMPORT_MODEL, LEG_MODEL,
+    TRANSACTION_MODEL,
+    STATEMENT_IMPORT_MODEL,
+    LEG_MODEL,
 )
 from hordak.utils import json_default
 
