@@ -54,3 +54,4 @@ class AbstractStatementImport(models.Model):
 
     class Meta:
         verbose_name = _("statementImport")
+        abstract = True

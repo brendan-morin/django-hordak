@@ -287,3 +287,4 @@ class AbstractLeg(models.Model):
 
     class Meta:
         verbose_name = _("Leg")
+        abstract = True

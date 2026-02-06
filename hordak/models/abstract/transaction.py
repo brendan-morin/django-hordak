@@ -71,6 +71,7 @@ class AbstractTransaction(models.Model):
     class Meta:
         get_latest_by = "date"
         verbose_name = _("transaction")
+        abstract = True
 
     def get_balance(self):
         return self.legs.sum_to_balance()

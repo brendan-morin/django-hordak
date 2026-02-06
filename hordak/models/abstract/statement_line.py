@@ -136,3 +136,4 @@ class AbstractStatementLine(models.Model):
 
     class Meta:
         verbose_name = _("statementLine")
+        abstract = True
