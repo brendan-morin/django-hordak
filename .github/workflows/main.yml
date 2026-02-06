@@ -22,8 +22,8 @@ jobs:
 
     strategy:
       matrix:
-        DJANGO_VERSION: ['4.2.*', '5.0.*', '5.1.*']
-        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+        DJANGO_VERSION: ['6.0.*']
+        python-version: ['3.13']
         import-export: ['3.3.5', '4.0.*']
         exclude:
           - DJANGO_VERSION: '5.0.*'
@@ -92,7 +92,7 @@ jobs:
 
       - name: Archive created migrations for debugging
         if: ${{ failure() }}
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: created-migrations
           path: hordak/migrations
