@@ -21,33 +21,11 @@ Additionally, there are models which related to the import of external bank stat
   create a transaction for the statement line.
 """
 
-from datetime import date
-
-from django.db import connection, models
-from django.db import transaction
-from django.db import transaction as db_transaction
-from django.db.models import JSONField
-from django.utils import timezone
-from django.utils.translation import gettext_lazy as _
-from djmoney.settings import CURRENCY_CHOICES
-from hordak.defaults import (
-    DECIMAL_PLACES,
-    MAX_DIGITS,
-    UUID_DEFAULT,
-)
 from hordak.models.abstract.account import AbstractAccount
 from hordak.models.abstract.leg import AbstractLeg
 from hordak.models.abstract.statement_import import AbstractStatementImport
 from hordak.models.abstract.statement_line import AbstractStatementLine
 from hordak.models.abstract.transaction import AbstractTransaction
-
-
-def json_default():
-    return {}
-
-
-def get_currency_choices():
-    return CURRENCY_CHOICES
 
 
 class Account(AbstractAccount):
